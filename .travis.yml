@@ -1,0 +1,5 @@
+language: objective-c
+before_install:
+    - git submodule update --init --recursive
+script: xcodebuild -project ScreenSceneController/ScreenSceneController.xcodeproj -scheme ScreenSceneController -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+script: xcodebuild test -project ScreenSceneController/ScreenSceneController.xcodeproj -scheme ScreenSceneController -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO

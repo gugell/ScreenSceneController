@@ -11,11 +11,11 @@
 		732BAA121A116C6A00E0DB80 /* ScreenSceneSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732BAA101A116C6A00E0DB80 /* ScreenSceneSettings.swift */; };
 		732BAA1C1A116E0200E0DB80 /* ScreenSceneAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732BAA1B1A116E0200E0DB80 /* ScreenSceneAttachment.swift */; };
 		732BAA1D1A116E0200E0DB80 /* ScreenSceneAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732BAA1B1A116E0200E0DB80 /* ScreenSceneAttachment.swift */; };
+		732D88F81A1CAF900004A87B /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 732D88F71A1CAF900004A87B /* Nimble.framework */; };
 		735A57D51A1246F30053BCC8 /* ScreenSceneSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735A57D41A1246F30053BCC8 /* ScreenSceneSpec.swift */; };
 		735DA4F71A08EA5E00FAE2EB /* ScreenSceneControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BB150D19FAEE13003EDEA7 /* ScreenSceneControllerSpec.swift */; };
 		735DA4F81A08EA5E00FAE2EB /* ScreenSceneContainerViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739D84F61A068F570066B524 /* ScreenSceneContainerViewSpec.swift */; };
 		735E769F1A14DFA2000399E5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 735E76981A14DF8F000399E5 /* Quick.framework */; };
-		735E76A21A14DFAA000399E5 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 735E76881A14DF8A000399E5 /* Nimble.framework */; };
 		739D84ED1A068AA30066B524 /* ScreenSceneContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739D84EC1A068AA30066B524 /* ScreenSceneContainerView.swift */; };
 		73A11B2519FAF13B00350CB7 /* ScreenSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A11B2419FAF13B00350CB7 /* ScreenSceneController.swift */; };
 		73A95B1A1A08F79F00F19F4D /* ScreenSceneControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A95B191A08F79F00F19F4D /* ScreenSceneControllerExtensions.swift */; };
@@ -32,34 +32,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		735E76871A14DF8A000399E5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 735E76801A14DF8A000399E5 /* Nimble.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1F1A74291940169200FFFC47;
-			remoteInfo = "Nimble-iOS";
-		};
-		735E76891A14DF8A000399E5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 735E76801A14DF8A000399E5 /* Nimble.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1F1A74341940169200FFFC47;
-			remoteInfo = "Nimble-iOSTests";
-		};
-		735E768B1A14DF8A000399E5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 735E76801A14DF8A000399E5 /* Nimble.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1F925EAD195C0D6300ED456B;
-			remoteInfo = "Nimble-OSX";
-		};
-		735E768D1A14DF8A000399E5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 735E76801A14DF8A000399E5 /* Nimble.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1F925EB7195C0D6300ED456B;
-			remoteInfo = "Nimble-OSXTests";
-		};
 		735E76971A14DF8F000399E5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 735E768F1A14DF8F000399E5 /* Quick.xcodeproj */;
@@ -100,8 +72,8 @@
 /* Begin PBXFileReference section */
 		732BAA101A116C6A00E0DB80 /* ScreenSceneSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSceneSettings.swift; sourceTree = "<group>"; };
 		732BAA1B1A116E0200E0DB80 /* ScreenSceneAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSceneAttachment.swift; sourceTree = "<group>"; };
+		732D88F71A1CAF900004A87B /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "../../../Library/Developer/Xcode/DerivedData/ScreenSceneController-grjkyhjkwzevnkgrcjajuaqzmysa/Build/Products/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
 		735A57D41A1246F30053BCC8 /* ScreenSceneSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSceneSpec.swift; sourceTree = "<group>"; };
-		735E76801A14DF8A000399E5 /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = ../Externals/Nimble/Nimble.xcodeproj; sourceTree = "<group>"; };
 		735E768F1A14DF8F000399E5 /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = ../Externals/Quick/Quick.xcodeproj; sourceTree = "<group>"; };
 		735E76A01A14DFA5000399E5 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "../Externals/Quick/Externals/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
 		739D84EC1A068AA30066B524 /* ScreenSceneContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSceneContainerView.swift; sourceTree = "<group>"; };
@@ -132,7 +104,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				735E769F1A14DFA2000399E5 /* Quick.framework in Frameworks */,
-				735E76A21A14DFAA000399E5 /* Nimble.framework in Frameworks */,
+				732D88F81A1CAF900004A87B /* Nimble.framework in Frameworks */,
 				73BB150719FAEE13003EDEA7 /* ScreenSceneController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,17 +112,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		735E76811A14DF8A000399E5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				735E76881A14DF8A000399E5 /* Nimble.framework */,
-				735E768A1A14DF8A000399E5 /* NimbleTests.xctest */,
-				735E768C1A14DF8A000399E5 /* Nimble.framework */,
-				735E768E1A14DF8A000399E5 /* Nimble-OSXTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		735E76901A14DF8F000399E5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				735E768F1A14DF8F000399E5 /* Quick.xcodeproj */,
-				735E76801A14DF8A000399E5 /* Nimble.xcodeproj */,
 				E6A2D9B9FEB140B6A09BD850 /* Frameworks */,
 				73BB14FC19FAEE13003EDEA7 /* Products */,
 				73BB14FD19FAEE13003EDEA7 /* ScreenSceneController */,
@@ -230,6 +190,7 @@
 		E6A2D9B9FEB140B6A09BD850 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				732D88F71A1CAF900004A87B /* Nimble.framework */,
 				735E76A01A14DFA5000399E5 /* Nimble.framework */,
 			);
 			name = Frameworks;
@@ -314,10 +275,6 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 735E76811A14DF8A000399E5 /* Products */;
-					ProjectRef = 735E76801A14DF8A000399E5 /* Nimble.xcodeproj */;
-				},
-				{
 					ProductGroup = 735E76901A14DF8F000399E5 /* Products */;
 					ProjectRef = 735E768F1A14DF8F000399E5 /* Quick.xcodeproj */;
 				},
@@ -331,34 +288,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		735E76881A14DF8A000399E5 /* Nimble.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Nimble.framework;
-			remoteRef = 735E76871A14DF8A000399E5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		735E768A1A14DF8A000399E5 /* NimbleTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = NimbleTests.xctest;
-			remoteRef = 735E76891A14DF8A000399E5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		735E768C1A14DF8A000399E5 /* Nimble.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Nimble.framework;
-			remoteRef = 735E768B1A14DF8A000399E5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		735E768E1A14DF8A000399E5 /* Nimble-OSXTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Nimble-OSXTests.xctest";
-			remoteRef = 735E768D1A14DF8A000399E5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		735E76981A14DF8F000399E5 /* Quick.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;

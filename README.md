@@ -19,10 +19,8 @@ For this reason you should add ScreenSceneController's **\*.swift sources** to y
 
 ```swift
 let mainViewController = UIViewController()
-let mainAttachmentLayout = ScreenSceneAttachmentLayout(width: 0.5, relative: true)
-let mainAttachment = ScreenSceneAttachment(viewController: mainViewController, screenSceneAttachmentLayout: mainAttachmentLayout)
-let screenScene = ScreenScene(mainScreenSceneAttachment: mainAttachment, accessoryScreenSceneAttachment: nil)
-self.screenSceneController?.pushSceneScene(screenScene, animated: true)
+let screenScene = ScreenScene(mainViewControler: mainViewController)
+self.screenSceneController?.pushScreenScene(screenScene, animated: true)
 ```
 
 ![ScreenSceneController](https://github.com/rshevchuk/ScreenSceneController/blob/master/preview.gif?raw=true)
@@ -30,8 +28,8 @@ self.screenSceneController?.pushSceneScene(screenScene, animated: true)
 ### Attach
 ```swift
 let accessoryViewController = UIViewController()
-let accessoryAttachmentLayout = ScreenSceneAttachmentLayout(width: 0.8, relative: true)
-let accessoryAttachment = ScreenSceneAttachment(viewController: accessoryViewController, screenSceneAttachmentLayout: accessoryAttachmentLayout)
+let accessoryAttachment = ScreenSceneAttachment(viewController: accessoryViewController)
+accessoryAttachment.screenSceneAttachmentLayout.exclusiveFocus = true
 mainViewController.screenScene?.attachAccessory(accessoryAttachment, animated: true)
 ```
 
@@ -44,24 +42,30 @@ mainViewController.screenScene?.detachAccessory(animated: true)
 
 ### ScreenSceneController
 ```swift
-func pushSceneScene(screenScene: ScreenSceneController.ScreenScene, animated: Bool)
+weak var delegate: ScreenSceneControllerDelegate?
+
+var topViewController: ScreenSceneController.ScreenScene? { get }
+
+var viewControllers: [ScreenSceneController.ScreenScene]
+func setViewControllers(viewControllers: [AnyObject]!, animated: Bool)
+
+func pushScreenScene(screenScene: ScreenSceneController.ScreenScene, animated: Bool)
 
 func popViewControllerAnimated(animated: Bool) -> UIViewController?
 func popToViewController(viewController: UIViewController, animated: Bool) -> [AnyObject]?
 func popToRootViewControllerAnimated(animated: Bool) -> [AnyObject]?
-
-var topViewController: ScreenSceneController.ScreenScene? { get }
-var viewControllers: [ScreenSceneController.ScreenScene]
-
-func setViewControllers(viewControllers: [AnyObject]!, animated: Bool)
 }
 ```
 
 ### ScreenScene
 ```swift
-var delegate: ScreenSceneDelegate?
+weak var delegate: ScreenSceneDelegate?
 
 init(mainScreenSceneAttachment: ScreenSceneController.ScreenSceneAttachment, accessoryScreenSceneAttachment: ScreenSceneController.ScreenSceneAttachment?)
+
+convenience init(mainScreenSceneAttachment: ScreenSceneController.ScreenSceneAttachment)
+convenience init(mainViewControler: UIViewController, accessoryViewControler: UIViewController?)
+convenience init(mainViewControler: UIViewController)
 
 func attachAccessory(accessoryScreenSceneAttachment: ScreenSceneController.ScreenSceneAttachment, animated: Bool)
 func detachAccessory(#animated: Bool)
@@ -69,36 +73,36 @@ func detachAccessory(#animated: Bool)
 
 ### ScreenSceneAttachment
 ```swift
-init(viewController: UIViewController, screenSceneAttachmentLayout: ScreenSceneController.ScreenSceneAttachmentLayout)
+init(viewController: UIViewController)
 
+let screenSceneAttachmentLayout: ScreenSceneController.ScreenSceneAttachmentLayout
 let viewController: UIViewController
-var screenSceneAttachmentLayout: ScreenSceneController.ScreenSceneAttachmentLayout
+
 ```
 
 ### ScreenSceneAttachmentLayout
 ```swift
-init(portraitWidth: CGFloat, landscapeWidth: CGFloat, relative: Bool)
-init(width: CGFloat, relative: Bool)
+var exclusiveFocus: Bool
+
+var portraitWidth: CGFloat
+var landscapeWidth: CGFloat
+var relative: Bool
+
+var navigationBarHeight: CGFloat
+var portraitInsets: UIEdgeInsets
+var landscapeInsets: UIEdgeInsets
 
 var allowInterpolatingEffect: Bool
-var exclusiveFocus: Bool
-var insets: UIEdgeInsets
 var interpolatingEffectRelativeValue: Int
-var landscapeWidth: CGFloat
-var portraitWidth: CGFloat
-var relative: Bool
+
 var shadowIntensity: CGFloat
+var cornerRadius: CGFloat
 ```
 
 ### UIViewController
 ```swift
 var screenSceneController: ScreenSceneController.ScreenSceneController? { get }
 var screenScene: ScreenSceneController.ScreenScene? { get }
-```
-
-### ScreenSceneContainerView
-```swift
-var classesThatDisableScrolling: [(AnyClass)]
 ```
 
 ### ScreenSceneControllerDelegate
@@ -109,12 +113,49 @@ optional func screenSceneController(screenSceneController: ScreenSceneController
 
 ### ScreenSceneDelegate
 ```swift
+optional func shouldBeginDetachAccessory(screenScene: ScreenSceneController.ScreenScene) -> Bool
+
 optional func screenScene(screenScene: ScreenSceneController.ScreenScene, willAttachAccessory viewController: UIViewController, animated: Bool)
 optional func screenScene(screenScene: ScreenSceneController.ScreenScene, didAttachAccessory viewController: UIViewController, animated: Bool)
 optional func screenScene(screenScene: ScreenSceneController.ScreenScene, willDetachAccessory viewController: UIViewController, animated: Bool)
 optional func screenScene(screenScene: ScreenSceneController.ScreenScene, didDetachAccessory viewController: UIViewController, animated: Bool)
 ```
 
+### ScreenSceneSettings
+```swift
+class var defaultSettings: ScreenSceneController.ScreenSceneSettings { get }
+
+
+var classesThatDisableScrolling: [(AnyClass)]
+func addClassThatDisableScrolling(classThatDisableScrolling: AnyClass)
+
+var navigationBarTitleTextAttributes: [String : AnyObject]
+
+var bringFocusAnimationDuration: NSTimeInterval
+var attachAnimationDamping: CGFloat
+var attachAnimationDuration: NSTimeInterval
+var detachAnimationDuration: NSTimeInterval
+
+var detachCap: CGFloat
+
+var attachmentExclusiveFocus: Bool
+
+var attachmentPortraitWidth: CGFloat
+var attachmentLandscapeWidth: CGFloat
+var attachmentRelative: Bool
+
+var attachmentNavigationBarHeight: CGFloat
+var attachmentTopInset: CGFloat
+var attachmentBottomInset: CGFloat
+var attachmentMinLeftInset: CGFloat
+var attachmentMinRightInset: CGFloat
+
+var attachmentAllowInterpolatingEffect: Bool
+var attachmentInterpolatingEffectRelativeValue: Int
+
+var attachmentShadowIntensity: CGFloat
+var attachmentCornerRadius: CGFloat
+```
 
 ## License
 

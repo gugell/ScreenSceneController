@@ -28,7 +28,7 @@ import UIKit
 
 @objc public class ScreenSceneAttachmentLayout {
     
-    public init() {
+    init() {
         
     }
     
@@ -150,7 +150,7 @@ import UIKit
         
     }
     
-    public var screenSceneAttachmentLayout: ScreenSceneAttachmentLayout
+    public let screenSceneAttachmentLayout: ScreenSceneAttachmentLayout
 
     public let viewController: UIViewController
 

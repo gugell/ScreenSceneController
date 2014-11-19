@@ -35,43 +35,43 @@ public class ScreenSceneSettings {
         return Static.instance
     }
     
-    var classesThatDisableScrolling = [AnyClass]()
-    func addClassThatDisableScrolling(classThatDisableScrolling: AnyClass) {
+    public var classesThatDisableScrolling = [AnyClass]()
+    public func addClassThatDisableScrolling(classThatDisableScrolling: AnyClass) {
         classesThatDisableScrolling.append(classThatDisableScrolling)
     }
     
-    var navigationBarTitleTextAttributes: [String: AnyObject] =
+    public var navigationBarTitleTextAttributes: [String: AnyObject] =
     [
         NSFontAttributeName: UIFont.boldSystemFontOfSize(20),
         NSForegroundColorAttributeName: UIColor.whiteColor()
     ]
     
-    var bringFocusAnimationDuration: NSTimeInterval    = 0.15
+    public var bringFocusAnimationDuration: NSTimeInterval    = 0.15
     
-    var attachAnimationDamping: CGFloat                = 0.8
-    var attachAnimationDuration: NSTimeInterval        = 0.4
+    public var attachAnimationDamping: CGFloat                = 0.8
+    public var attachAnimationDuration: NSTimeInterval        = 0.4
     
-    var detachAnimationDuration: NSTimeInterval        = 0.3
+    public var detachAnimationDuration: NSTimeInterval        = 0.3
     
-    var detachCap: CGFloat                             = 0.1
+    public var detachCap: CGFloat                             = 0.1
     
-    var attachmentAllowInterpolatingEffect: Bool       = true
-    var attachmentInterpolatingEffectRelativeValue:Int = 20
+    public var attachmentAllowInterpolatingEffect: Bool       = true
+    public var attachmentInterpolatingEffectRelativeValue:Int = 20
 
-    var attachmentCornerRadius: CGFloat                = 10
+    public var attachmentCornerRadius: CGFloat                = 10
 
-    var attachmentPortraitWidth: CGFloat               = 0.5
-    var attachmentLandscapeWidth: CGFloat              = 0.5
-    var attachmentRelative: Bool                       = true
-    var attachmentExclusiveFocus: Bool                 = false
+    public var attachmentPortraitWidth: CGFloat               = 0.5
+    public var attachmentLandscapeWidth: CGFloat              = 0.5
+    public var attachmentRelative: Bool                       = true
+    public var attachmentExclusiveFocus: Bool                 = false
     
-    var attachmentTopInset: CGFloat                    = 65
-    var attachmentBottomInset: CGFloat                 = 20
-    var attachmentMinLeftInset: CGFloat                = 10
-    var attachmentMinRightInset: CGFloat               = 10
+    public var attachmentTopInset: CGFloat                    = 65
+    public var attachmentBottomInset: CGFloat                 = 20
+    public var attachmentMinLeftInset: CGFloat                = 10
+    public var attachmentMinRightInset: CGFloat               = 10
 
-    var attachmentNavigationBarHeight:CGFloat          = 65
+    public var attachmentNavigationBarHeight:CGFloat          = 65
 
-    var attachmentShadowIntensity:CGFloat              = 4
+    public var attachmentShadowIntensity:CGFloat              = 4
     
 }

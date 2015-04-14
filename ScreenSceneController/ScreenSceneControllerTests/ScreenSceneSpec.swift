@@ -30,7 +30,7 @@ class ScreenSceneSpec: QuickSpec {
 
     override func spec() {
         
-        describe("ScreenScene", {
+        describe("ScreenScene") {
             
             var mainController: UIViewController!
             var mainAttachment: ScreenSceneAttachment!
@@ -40,7 +40,7 @@ class ScreenSceneSpec: QuickSpec {
             
             var screenScene: MockScreenScene!
             
-            beforeEach({
+            beforeEach {
                 
                 mainController = UIViewController()
                 mainAttachment = ScreenSceneAttachment(viewController: mainController)
@@ -48,9 +48,9 @@ class ScreenSceneSpec: QuickSpec {
                 accessoryController = UIViewController()
                 accessoryAttachment = ScreenSceneAttachment(viewController: accessoryController)
                 
-            })
+            }
             
-            it("should add attachments when it loaded", {
+            it("should add attachments when it loaded") {
                 
                 screenScene = MockScreenScene(mainScreenSceneAttachment: mainAttachment, accessoryScreenSceneAttachment: accessoryAttachment)
                 screenScene.viewDidLoad()
@@ -58,9 +58,9 @@ class ScreenSceneSpec: QuickSpec {
                 expect(mainAttachment.viewController.parentViewController) === screenScene
                 expect(accessoryAttachment.viewController.parentViewController) === screenScene
                 
-            })
+            }
             
-            it("should have setup like this when it loaded", {
+            it("should have setup like this when it loaded") {
                 
                 screenScene = MockScreenScene(mainScreenSceneAttachment: mainAttachment, accessoryScreenSceneAttachment: accessoryAttachment)
                 screenScene.viewDidLoad()
@@ -73,21 +73,21 @@ class ScreenSceneSpec: QuickSpec {
                 
                 expect(screenScene.view.gestureRecognizers).to(contain(screenScene.sceneTapGestureRecognizer))
                 
-            })
+            }
             
             
             
-            describe("reactions on view events", {
+            describe("reactions on view events") {
                 
-                beforeEach({
+                beforeEach {
                     screenScene = MockScreenScene(mainScreenSceneAttachment: mainAttachment, accessoryScreenSceneAttachment: accessoryAttachment)
-                })
+                }
                 
-                it("viewDidLayoutSubviews", {
+                it("viewDidLayoutSubviews") {
                     screenScene.updateShadowsWasCalled = false
                     screenScene.viewDidLayoutSubviews()
                     expect(screenScene.updateShadowsWasCalled).to(beTruthy())
-                })
+                }
                 
                 it("willAppear check") {
                     screenScene.updateLayoutWasCalled = false
@@ -103,9 +103,9 @@ class ScreenSceneSpec: QuickSpec {
                     expect(screenScene.updateShadowsWasCalled).to(beTruthy())
                 }
                 
-            })
+            }
             
-            it("should remove attachment before add new one", {
+            it("should remove attachment before add new one") {
                 
                 screenScene = MockScreenScene(mainScreenSceneAttachment: mainAttachment, accessoryScreenSceneAttachment: accessoryAttachment)
                 expect(screenScene.accessoryScreenSceneAttachment) === accessoryAttachment
@@ -113,9 +113,9 @@ class ScreenSceneSpec: QuickSpec {
                 screenScene.attachAccessory(allNewAccessoryAttachment, animated: false)
                 expect(screenScene.accessoryScreenSceneAttachment) === allNewAccessoryAttachment
                 
-            })
+            }
             
-            it("should setup views hierarchy when add screen scene attachment", {
+            it("should setup views hierarchy when add screen scene attachment") {
                 
                 screenScene = MockScreenScene(mainScreenSceneAttachment: mainAttachment, accessoryScreenSceneAttachment: nil)
                 expect(accessoryAttachment.containerView.superview).to(beNil())
@@ -128,9 +128,9 @@ class ScreenSceneSpec: QuickSpec {
                 expect(accessoryAttachment.viewController.view.superview) === accessoryAttachment.containerView
                 expect(accessoryAttachment.navigationBar.superview) === accessoryAttachment.containerView
                 expect(accessoryAttachment.containerOverlay.superview) === accessoryAttachment.containerView
-            })
+            }
             
-            it("should remove views owned by attachment when they are disappear", {
+            it("should remove views owned by attachment when they are disappear") {
                 
                 screenScene.addScreenSceneAttachment(accessoryAttachment)
                 screenScene.removeAllAttachments()
@@ -142,9 +142,9 @@ class ScreenSceneSpec: QuickSpec {
                     }
                 }
                 
-            })
+            }
             
-            it("should bring focus on right view", {
+            it("should bring focus on right view") {
                 
                 screenScene = MockScreenScene(mainScreenSceneAttachment: mainAttachment, accessoryScreenSceneAttachment: accessoryAttachment)
                 screenScene.bringFocus(mainAttachment, animated: false)
@@ -158,9 +158,9 @@ class ScreenSceneSpec: QuickSpec {
                 expect(screenScene.attachmentInFocus(screenScene.accessoryScreenSceneAttachment)).to(beFalsy())
                 
                 
-            })
+            }
             
-            it("should detach exlusive focus accessory if it lost focus", {
+            it("should detach exlusive focus accessory if it lost focus") {
                 
                 screenScene = MockScreenScene(mainScreenSceneAttachment: mainAttachment, accessoryScreenSceneAttachment: accessoryAttachment)
                 
@@ -172,9 +172,9 @@ class ScreenSceneSpec: QuickSpec {
                 
                 expect(screenScene.attachmentInFocus(screenScene.accessoryScreenSceneAttachment)).to(beFalsy())
                 
-            })
+            }
             
-            it("currently dragging containerView only can bring focus on itself", {
+            it("currently dragging containerView only can bring focus on itself") {
                 
                 screenScene = MockScreenScene(mainScreenSceneAttachment: mainAttachment, accessoryScreenSceneAttachment: accessoryAttachment)
                 
@@ -194,9 +194,9 @@ class ScreenSceneSpec: QuickSpec {
                 screenScene.scrollViewDidScroll(screenScene.draggingContainerView!)
                 expect(screenScene.attachmentInFocus(accessoryAttachment)).to(beTruthy())
                 
-            })
+            }
             
-            it("containersViews should be right ones", {
+            it("containersViews should be right ones") {
                 
                 screenScene = MockScreenScene(mainScreenSceneAttachment: mainAttachment, accessoryScreenSceneAttachment: nil)
                 
@@ -210,9 +210,9 @@ class ScreenSceneSpec: QuickSpec {
                 screenScene.removeAllAttachments()
                 expect(screenScene.containersViews.count).to(equal(0))
                 
-            })
+            }
             
-            it("should have constraints count equal to X when have one attachment", {
+            it("should have constraints count equal to X when have one attachment") {
                 
                 let numberOfConstraintsWhenScreenSceneHaveOneAttachment = 20
                 screenScene = MockScreenScene(mainScreenSceneAttachment: mainAttachment, accessoryScreenSceneAttachment: nil)
@@ -221,9 +221,9 @@ class ScreenSceneSpec: QuickSpec {
                 screenScene.attachAccessory(accessoryAttachment, animated: false)
                 screenScene.detachAccessory(animated: false)
                 expect(screenScene.view.constraints().count).to(beLessThanOrEqualTo(numberOfConstraintsWhenScreenSceneHaveOneAttachment))
-            })
+            }
             
-            it("should have constraints count equal to X when have two attachments", {
+            it("should have constraints count equal to X when have two attachments") {
                 
                 let numberOfConstraintsWhenScreenSceneHaveTwoAttachment = 36
                 screenScene = MockScreenScene(mainScreenSceneAttachment: mainAttachment, accessoryScreenSceneAttachment: accessoryAttachment)
@@ -232,7 +232,7 @@ class ScreenSceneSpec: QuickSpec {
                 screenScene.attachAccessory(accessoryAttachment, animated: false)
                 expect(screenScene.view.constraints().count).to(beLessThanOrEqualTo(numberOfConstraintsWhenScreenSceneHaveTwoAttachment))
                 
-            })
+            }
             
             it("should update scene when attachmentLayoutDidChange") {
                 
@@ -248,7 +248,7 @@ class ScreenSceneSpec: QuickSpec {
                 expect(screenScene.updateFocusWasCalled).to(beTruthy())
             }
             
-        })
+        }
         
     }
     

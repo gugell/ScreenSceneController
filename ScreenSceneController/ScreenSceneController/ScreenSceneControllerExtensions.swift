@@ -55,7 +55,7 @@ extension UIViewController {
         
         if let scenes = screenSceneController?.viewControllers {
             for scene in  scenes {
-                for child in scene.childViewControllers as [UIViewController] {
+                for child in scene.childViewControllers as! [UIViewController] {
                     if self == child {
                         return scene
                     }

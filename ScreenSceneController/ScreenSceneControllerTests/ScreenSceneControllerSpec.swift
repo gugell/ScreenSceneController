@@ -33,46 +33,46 @@ class ScreenSceneControllerSpec: QuickSpec {
     
     override func spec() {
         
-        describe("ScreenSceneController", {
+        describe("ScreenSceneController") {
             var screenSceneController: ScreenSceneController!
             
-            describe("when it loaded", {
+            describe("when it loaded") {
                 
-                beforeEach{
+                beforeEach {
                     screenSceneController = ScreenSceneController()
                     screenSceneController.viewDidLoad()
                 }
                                 
-                it("should preserve subviews order and place them on top of screenSceneNavigationCcontroller", {
+                it("should preserve subviews order and place them on top of screenSceneNavigationCcontroller") {
                     var orderedSubviewsAddedBeforeChildNavigationController = [UIImageView(), UIButton(), UILabel()]
                     
                     for subviewToAdd in orderedSubviewsAddedBeforeChildNavigationController {
                         screenSceneController.view.addSubview(subviewToAdd)
                     }
                     
-                    let orderedSubviewsAddedAfterChildNavigationController = screenSceneController.view.subviews as [UIView]
+                    let orderedSubviewsAddedAfterChildNavigationController = screenSceneController.view.subviews as! [UIView]
                     
                     orderedSubviewsAddedBeforeChildNavigationController.insert(screenSceneController.screenSceneNavigationController.view, atIndex: 0)
                     expect(orderedSubviewsAddedBeforeChildNavigationController).to(equal(orderedSubviewsAddedAfterChildNavigationController))
                     
-                })
+                }
                 
-                it("should add child screenSceneNavigationController when perform initial setup", {
+                it("should add child screenSceneNavigationController when perform initial setup") {
                     expect(screenSceneController.childViewControllers).to(contain(screenSceneController.screenSceneNavigationController))
-                })
+                }
                 
-            })
+            }
             
-        })
+        }
         
-        describe("UIViewController inside ScreenSceneController", {
-            
+        describe("UIViewController inside ScreenSceneController") {
+
             var viewController: UIViewController!
             var secondScreenScene: ScreenScene!
             var firstSceneController: ScreenScene!
             var screenSceneController: ScreenSceneController!
-            
-            beforeEach({
+            beforeEach {
+
                 viewController = UIViewController()
                 
                 firstSceneController = ScreenScene(mainScreenSceneAttachment: ScreenSceneAttachment(viewController: UIViewController()), accessoryScreenSceneAttachment: nil)
@@ -85,22 +85,22 @@ class ScreenSceneControllerSpec: QuickSpec {
                 screenSceneController.pushScreenScene(firstSceneController, animated: false)
                 
                 firstSceneController.viewDidLoad()
-            })
+            }
             
-            describe("when UIViewController not have screenSceneController", {
+            describe("when UIViewController not have screenSceneController") {
                 
-                it("UIViewController should return nil ScreenSceneController", {
+                it("UIViewController should return nil ScreenSceneController") {
                     
                     expect(secondScreenScene.screenSceneController).to(beNil())
                     expect(viewController.screenSceneController).to(beNil())
                     
-                })
-            })
+                }
+            }
             
             
-            describe("when UIViewController have a screenSceneController", {
+            describe("when UIViewController have a screenSceneController") {
                 
-                it("UIViewController should return screenScene and screenSceneController", {
+                it("UIViewController should return screenScene and screenSceneController") {
                     
                     screenSceneController.pushScreenScene(secondScreenScene, animated: false)
                     secondScreenScene.viewDidLoad()
@@ -110,10 +110,10 @@ class ScreenSceneControllerSpec: QuickSpec {
                     expect(viewController.screenScene).to(equal(secondScreenScene))
                     
                     
-                })
+                }
                 
                 
-                it("ScreenSceneController should have right viewControllers count and topViewController when setViewControllers", {
+                it("ScreenSceneController should have right viewControllers count and topViewController when setViewControllers") {
                     screenSceneController.setViewControllers([firstSceneController], animated: false)
                     expect(screenSceneController.topViewController).to(equal(firstSceneController))
                     expect(screenSceneController.viewControllers.count).to(equal(1))
@@ -121,50 +121,10 @@ class ScreenSceneControllerSpec: QuickSpec {
                     expect(screenSceneController.viewControllers.count).to(equal(2))
                     expect(screenSceneController.topViewController).to(equal(secondScreenScene))
                     
-                })
-                
-                it("ScreenSceneController should call delegate when push or pop screneScene", {
-                    
-                    class MockScreenSceneControllerDelegate: NSObject, ScreenSceneControllerDelegate {
-                        
-                        func screenSceneController(screenSceneController: ScreenSceneController, willShowViewController viewController: UIViewController, animated: Bool) {
-                            willShowViewController = viewController
-                        }
-                        
-                        func screenSceneController(screenSceneController: ScreenSceneController, didShowViewController viewController: UIViewController, animated: Bool) {
-                            didShowViewController = viewController
-                        }
-                    }
-                    
-                    expect(screenSceneController.screenSceneNavigationController.delegate is ScreenSceneController).to(beTruthy())
-                    
-                    screenSceneController.setViewControllers([], animated: false)
-                    expect(screenSceneController.viewControllers.count).to(equal(0))
-                    
-                    let delegate = MockScreenSceneControllerDelegate()
-                    screenSceneController.delegate = delegate
-                    
-                    expect(willShowViewController).to(beNil())
-                    expect(didShowViewController).to(beNil())
-                    
-                    screenSceneController.navigationController(screenSceneController.screenSceneNavigationController, willShowViewController: firstSceneController, animated: false)
-                    screenSceneController.navigationController(screenSceneController.screenSceneNavigationController, didShowViewController: firstSceneController, animated: false)
-                    
-                    expect(willShowViewController).to(equal(firstSceneController))
-                    expect(didShowViewController).to(equal(firstSceneController))
-                    
-                    screenSceneController.navigationController(screenSceneController.screenSceneNavigationController, willShowViewController: secondScreenScene, animated: false)
-                    screenSceneController.navigationController(screenSceneController.screenSceneNavigationController, didShowViewController: secondScreenScene, animated: false)
-                    
-                    expect(willShowViewController).to(equal(secondScreenScene))
-                    expect(didShowViewController).to(equal(secondScreenScene))
-                    
-                    
-                })
-                
-            })
+                }
+            }
             
-        })
+        }
         
     }
     

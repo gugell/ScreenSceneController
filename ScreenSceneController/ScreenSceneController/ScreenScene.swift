@@ -448,7 +448,7 @@ import UIKit
         
         var containersViews = [ScreenSceneContainerView]()
         
-        for subview in view.subviews as [UIView] {
+        for subview in view.subviews as! [UIView] {
             
             for screenSceneAttachment in screenSceneAttachments {
                 

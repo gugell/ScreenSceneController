@@ -28,13 +28,13 @@ import Nimble
 
 class ScreenSceneContainerViewSpec: QuickSpec {
     override func spec() {
-        describe("ScreenSceneContainerView", {
+        describe("ScreenSceneContainerView") {
             
             var screenSceneContainerView = ScreenSceneContainerView()
             
-            describe("when move to .superview", {
+            describe("when move to .superview") {
                 
-                it("should have setup like this", {
+                it("should have setup like this") {
                     screenSceneContainerView.willMoveToSuperview(nil)
                     expect(screenSceneContainerView.delaysContentTouches).to(beFalsy())
                     expect(screenSceneContainerView.canCancelContentTouches).to(beTruthy())
@@ -43,34 +43,34 @@ class ScreenSceneContainerViewSpec: QuickSpec {
                     expect(screenSceneContainerView.alwaysBounceVertical).to(beFalsy())
                     expect(screenSceneContainerView.showsHorizontalScrollIndicator).to(beFalsy())
                     expect(screenSceneContainerView.showsVerticalScrollIndicator).to(beFalsy())
-                })
+                }
                 
-            })
-            
-            describe("when touch intersects .subview", {
+            }
+
+            describe("when touch intersects .subview") {
                 ScreenSceneSettings.defaultSettings.addClassThatDisableScrolling(NSClassFromString("UILabel"))
                 
-                it("when classesThatDisableScrolling contain view.class should not pass hitTest", {
+                it("when classesThatDisableScrolling contain view.class should not pass hitTest") {
                     expect(screenSceneContainerView.hitTest(UILabel())).to(beFalsy())
-                })
+                }
                 
-                it("when classesThatDisableScrolling contain view.superview.class should not pass hitTest", {
+                it("when classesThatDisableScrolling contain view.superview.class should not pass hitTest") {
                     
                     let label = UILabel()
                     let imageView = UIImageView()
                     label.addSubview(imageView)
                     
                     expect(screenSceneContainerView.hitTest(imageView)).to(beFalsy())
-                })
+                }
                 
-                it("when classesThatDisableScrolling not contain view.class should pass hitTest", {
+                it("when classesThatDisableScrolling not contain view.class should pass hitTest") {
                     expect(screenSceneContainerView.hitTest(UIImageView())).to(beTruthy())
-                })
+                }
                 
                 
-            })
+            }
             
-        })
+        }
     }
     
     

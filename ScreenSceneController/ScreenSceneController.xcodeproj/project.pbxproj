@@ -15,7 +15,6 @@
 		735A57D51A1246F30053BCC8 /* ScreenSceneSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735A57D41A1246F30053BCC8 /* ScreenSceneSpec.swift */; };
 		735DA4F71A08EA5E00FAE2EB /* ScreenSceneControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BB150D19FAEE13003EDEA7 /* ScreenSceneControllerSpec.swift */; };
 		735DA4F81A08EA5E00FAE2EB /* ScreenSceneContainerViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739D84F61A068F570066B524 /* ScreenSceneContainerViewSpec.swift */; };
-		735E769F1A14DFA2000399E5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 735E76981A14DF8F000399E5 /* Quick.framework */; };
 		739D84ED1A068AA30066B524 /* ScreenSceneContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739D84EC1A068AA30066B524 /* ScreenSceneContainerView.swift */; };
 		73A11B2519FAF13B00350CB7 /* ScreenSceneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A11B2419FAF13B00350CB7 /* ScreenSceneController.swift */; };
 		73A95B1A1A08F79F00F19F4D /* ScreenSceneControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A95B191A08F79F00F19F4D /* ScreenSceneControllerExtensions.swift */; };
@@ -32,33 +31,89 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		735E76971A14DF8F000399E5 /* PBXContainerItemProxy */ = {
+		73AD85CA1ADD416100E6A624 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 735E768F1A14DF8F000399E5 /* Quick.xcodeproj */;
+			containerPortal = 73AD85C11ADD416100E6A624 /* Quick.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = DAEB6B8E1943873100289F44;
 			remoteInfo = "Quick-OSX";
 		};
-		735E76991A14DF8F000399E5 /* PBXContainerItemProxy */ = {
+		73AD85CC1ADD416100E6A624 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 735E768F1A14DF8F000399E5 /* Quick.xcodeproj */;
+			containerPortal = 73AD85C11ADD416100E6A624 /* Quick.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = DAEB6B991943873100289F44;
 			remoteInfo = "Quick-OSXTests";
 		};
-		735E769B1A14DF8F000399E5 /* PBXContainerItemProxy */ = {
+		73AD85CE1ADD416100E6A624 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 735E768F1A14DF8F000399E5 /* Quick.xcodeproj */;
+			containerPortal = 73AD85C11ADD416100E6A624 /* Quick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DA5663E81A4C8D8500193C88;
+			remoteInfo = "QuickFocused-OSXTests";
+		};
+		73AD85D01ADD416100E6A624 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73AD85C11ADD416100E6A624 /* Quick.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 5A5D117C19473F2100F6D13D;
 			remoteInfo = "Quick-iOS";
 		};
-		735E769D1A14DF8F000399E5 /* PBXContainerItemProxy */ = {
+		73AD85D21ADD416100E6A624 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 735E768F1A14DF8F000399E5 /* Quick.xcodeproj */;
+			containerPortal = 73AD85C11ADD416100E6A624 /* Quick.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 5A5D118619473F2100F6D13D;
 			remoteInfo = "Quick-iOSTests";
+		};
+		73AD85D41ADD416100E6A624 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73AD85C11ADD416100E6A624 /* Quick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DA9876B21A4C70EB0004AA17;
+			remoteInfo = "QuickFocused-iOSTests";
+		};
+		73AD85DD1ADD416800E6A624 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73AD85D61ADD416800E6A624 /* Nimble.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F1A74291940169200FFFC47;
+			remoteInfo = "Nimble-iOS";
+		};
+		73AD85DF1ADD416800E6A624 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73AD85D61ADD416800E6A624 /* Nimble.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F1A74341940169200FFFC47;
+			remoteInfo = "Nimble-iOSTests";
+		};
+		73AD85E11ADD416800E6A624 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73AD85D61ADD416800E6A624 /* Nimble.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F925EAD195C0D6300ED456B;
+			remoteInfo = "Nimble-OSX";
+		};
+		73AD85E31ADD416800E6A624 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73AD85D61ADD416800E6A624 /* Nimble.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F925EB7195C0D6300ED456B;
+			remoteInfo = "Nimble-OSXTests";
+		};
+		73AD85E51ADD418400E6A624 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73AD85D61ADD416800E6A624 /* Nimble.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F1A74281940169200FFFC47;
+			remoteInfo = "Nimble-iOS";
+		};
+		73AD85E71ADD418400E6A624 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73AD85C11ADD416100E6A624 /* Quick.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A5D117B19473F2100F6D13D;
+			remoteInfo = "Quick-iOS";
 		};
 		73BB150819FAEE13003EDEA7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -74,13 +129,14 @@
 		732BAA1B1A116E0200E0DB80 /* ScreenSceneAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSceneAttachment.swift; sourceTree = "<group>"; };
 		732D88F71A1CAF900004A87B /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "../../../Library/Developer/Xcode/DerivedData/ScreenSceneController-grjkyhjkwzevnkgrcjajuaqzmysa/Build/Products/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
 		735A57D41A1246F30053BCC8 /* ScreenSceneSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSceneSpec.swift; sourceTree = "<group>"; };
-		735E768F1A14DF8F000399E5 /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = ../Externals/Quick/Quick.xcodeproj; sourceTree = "<group>"; };
 		735E76A01A14DFA5000399E5 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "../Externals/Quick/Externals/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
 		739D84EC1A068AA30066B524 /* ScreenSceneContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSceneContainerView.swift; sourceTree = "<group>"; };
 		739D84F61A068F570066B524 /* ScreenSceneContainerViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSceneContainerViewSpec.swift; sourceTree = "<group>"; };
 		73A11B2419FAF13B00350CB7 /* ScreenSceneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ScreenSceneController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		73A95B191A08F79F00F19F4D /* ScreenSceneControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSceneControllerExtensions.swift; sourceTree = "<group>"; };
 		73A95B241A08FA5800F19F4D /* ScreenSceneAttachmenSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenSceneAttachmenSpec.swift; sourceTree = "<group>"; };
+		73AD85C11ADD416100E6A624 /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = ../Externals/Quick/Quick.xcodeproj; sourceTree = "<group>"; };
+		73AD85D61ADD416800E6A624 /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = ../Externals/Quick/Externals/Nimble/Nimble.xcodeproj; sourceTree = "<group>"; };
 		73BB14FB19FAEE13003EDEA7 /* ScreenSceneController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ScreenSceneController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73BB14FF19FAEE13003EDEA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73BB150019FAEE13003EDEA7 /* ScreenSceneController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenSceneController.h; sourceTree = "<group>"; };
@@ -103,7 +159,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				735E769F1A14DFA2000399E5 /* Quick.framework in Frameworks */,
 				732D88F81A1CAF900004A87B /* Nimble.framework in Frameworks */,
 				73BB150719FAEE13003EDEA7 /* ScreenSceneController.framework in Frameworks */,
 			);
@@ -112,13 +167,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		735E76901A14DF8F000399E5 /* Products */ = {
+		73AD85C21ADD416100E6A624 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				735E76981A14DF8F000399E5 /* Quick.framework */,
-				735E769A1A14DF8F000399E5 /* Quick-OSXTests.xctest */,
-				735E769C1A14DF8F000399E5 /* Quick.framework */,
-				735E769E1A14DF8F000399E5 /* Quick-iOSTests.xctest */,
+				73AD85CB1ADD416100E6A624 /* Quick.framework */,
+				73AD85CD1ADD416100E6A624 /* Quick-OSXTests.xctest */,
+				73AD85CF1ADD416100E6A624 /* QuickFocused-OSXTests.xctest */,
+				73AD85D11ADD416100E6A624 /* Quick.framework */,
+				73AD85D31ADD416100E6A624 /* Quick-iOSTests.xctest */,
+				73AD85D51ADD416100E6A624 /* QuickFocused-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		73AD85D71ADD416800E6A624 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				73AD85DE1ADD416800E6A624 /* Nimble.framework */,
+				73AD85E01ADD416800E6A624 /* NimbleTests.xctest */,
+				73AD85E21ADD416800E6A624 /* Nimble.framework */,
+				73AD85E41ADD416800E6A624 /* NimbleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,7 +194,8 @@
 		73BB14F119FAEE13003EDEA7 = {
 			isa = PBXGroup;
 			children = (
-				735E768F1A14DF8F000399E5 /* Quick.xcodeproj */,
+				73AD85D61ADD416800E6A624 /* Nimble.xcodeproj */,
+				73AD85C11ADD416100E6A624 /* Quick.xcodeproj */,
 				E6A2D9B9FEB140B6A09BD850 /* Frameworks */,
 				73BB14FC19FAEE13003EDEA7 /* Products */,
 				73BB14FD19FAEE13003EDEA7 /* ScreenSceneController */,
@@ -239,6 +308,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				73AD85E61ADD418400E6A624 /* PBXTargetDependency */,
+				73AD85E81ADD418400E6A624 /* PBXTargetDependency */,
 				73BB150919FAEE13003EDEA7 /* PBXTargetDependency */,
 			);
 			name = ScreenSceneControllerTests;
@@ -275,8 +346,12 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 735E76901A14DF8F000399E5 /* Products */;
-					ProjectRef = 735E768F1A14DF8F000399E5 /* Quick.xcodeproj */;
+					ProductGroup = 73AD85D71ADD416800E6A624 /* Products */;
+					ProjectRef = 73AD85D61ADD416800E6A624 /* Nimble.xcodeproj */;
+				},
+				{
+					ProductGroup = 73AD85C21ADD416100E6A624 /* Products */;
+					ProjectRef = 73AD85C11ADD416100E6A624 /* Quick.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -288,32 +363,74 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		735E76981A14DF8F000399E5 /* Quick.framework */ = {
+		73AD85CB1ADD416100E6A624 /* Quick.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Quick.framework;
-			remoteRef = 735E76971A14DF8F000399E5 /* PBXContainerItemProxy */;
+			remoteRef = 73AD85CA1ADD416100E6A624 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		735E769A1A14DF8F000399E5 /* Quick-OSXTests.xctest */ = {
+		73AD85CD1ADD416100E6A624 /* Quick-OSXTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "Quick-OSXTests.xctest";
-			remoteRef = 735E76991A14DF8F000399E5 /* PBXContainerItemProxy */;
+			remoteRef = 73AD85CC1ADD416100E6A624 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		735E769C1A14DF8F000399E5 /* Quick.framework */ = {
+		73AD85CF1ADD416100E6A624 /* QuickFocused-OSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "QuickFocused-OSXTests.xctest";
+			remoteRef = 73AD85CE1ADD416100E6A624 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		73AD85D11ADD416100E6A624 /* Quick.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Quick.framework;
-			remoteRef = 735E769B1A14DF8F000399E5 /* PBXContainerItemProxy */;
+			remoteRef = 73AD85D01ADD416100E6A624 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		735E769E1A14DF8F000399E5 /* Quick-iOSTests.xctest */ = {
+		73AD85D31ADD416100E6A624 /* Quick-iOSTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "Quick-iOSTests.xctest";
-			remoteRef = 735E769D1A14DF8F000399E5 /* PBXContainerItemProxy */;
+			remoteRef = 73AD85D21ADD416100E6A624 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		73AD85D51ADD416100E6A624 /* QuickFocused-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "QuickFocused-iOSTests.xctest";
+			remoteRef = 73AD85D41ADD416100E6A624 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		73AD85DE1ADD416800E6A624 /* Nimble.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Nimble.framework;
+			remoteRef = 73AD85DD1ADD416800E6A624 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		73AD85E01ADD416800E6A624 /* NimbleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = NimbleTests.xctest;
+			remoteRef = 73AD85DF1ADD416800E6A624 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		73AD85E21ADD416800E6A624 /* Nimble.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Nimble.framework;
+			remoteRef = 73AD85E11ADD416800E6A624 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		73AD85E41ADD416800E6A624 /* NimbleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = NimbleTests.xctest;
+			remoteRef = 73AD85E31ADD416800E6A624 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -371,6 +488,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		73AD85E61ADD418400E6A624 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Nimble-iOS";
+			targetProxy = 73AD85E51ADD418400E6A624 /* PBXContainerItemProxy */;
+		};
+		73AD85E81ADD418400E6A624 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Quick-iOS";
+			targetProxy = 73AD85E71ADD418400E6A624 /* PBXContainerItemProxy */;
+		};
 		73BB150919FAEE13003EDEA7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 73BB14FA19FAEE13003EDEA7 /* ScreenSceneController */;

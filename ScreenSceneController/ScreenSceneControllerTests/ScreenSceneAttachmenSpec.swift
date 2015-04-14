@@ -29,84 +29,84 @@ import Nimble
 class ScreenSceneAttachmenSpec: QuickSpec {
     override func spec() {
         
-        describe("ScreenSceneAttachment", {
+        describe("ScreenSceneAttachment") {
             
             var screenSceneAttachment: MockScreenSceneAttachment!
             
-            beforeEach({
+            beforeEach {
                 screenSceneAttachment = MockScreenSceneAttachment(viewController: UIViewController())
-            })
+            }
             
-            it("should setup navigationBar when it newly created", {
+            it("should setup navigationBar when it newly created") {
                 expect(screenSceneAttachment.setupAttachmentNavigationBarWasCalled).to(beFalsy())
                 screenSceneAttachment.performInitialSetups()
                 expect(screenSceneAttachment.setupAttachmentNavigationBarWasCalled).to(beTruthy())
-            })
+            }
             
-            it("should setup viewController.view when it newly created", {
+            it("should setup viewController.view when it newly created") {
                 expect(screenSceneAttachment.setupAttachmentViewControllerViewWasCalled).to(beFalsy())
                 screenSceneAttachment.performInitialSetups()
                 expect(screenSceneAttachment.setupAttachmentViewControllerViewWasCalled).to(beTruthy())
-            })
+            }
             
-            it("should setup attachment.containerView when it newly created", {
+            it("should setup attachment.containerView when it newly created") {
                 expect(screenSceneAttachment.setupAttachmentContainerOverlayWasCalled).to(beFalsy())
                 screenSceneAttachment.performInitialSetups()
                 expect(screenSceneAttachment.setupAttachmentContainerOverlayWasCalled).to(beTruthy())
-            })
+            }
             
-            it("should setup attachment.containerOverlay when it newly created", {
+            it("should setup attachment.containerOverlay when it newly created") {
                 expect(screenSceneAttachment.setupAttachmentContainerOverlayWasCalled).to(beFalsy())
                 screenSceneAttachment.performInitialSetups()
                 expect(screenSceneAttachment.setupAttachmentContainerOverlayWasCalled).to(beTruthy())
-            })
+            }
             
-        })
+        }
         
-        describe("ScreenSceneAttachmentLayout", {
+        describe("ScreenSceneAttachmentLayout") {
             
             
             var screenSceneAttachmentLayout: MockScreenSceneAttachmentLayout!
             
-            beforeEach({
+            beforeEach {
                 screenSceneAttachmentLayout = MockScreenSceneAttachmentLayout()
-            })
+            }
              
-            context("should perform updateAttachemntLayout() when didSet some var", {
-                it("exclusiveFocus", {
+            context("should perform updateAttachemntLayout() when didSet some var") {
+                it("exclusiveFocus") {
                     screenSceneAttachmentLayout.exclusiveFocus = false
                     expect(screenSceneAttachmentLayout.updateAttachemntLayoutWasCalled).to(beTruthy())
-                })
-                it("portraitWidth", {
+                }
+                it("portraitWidth") {
                     screenSceneAttachmentLayout.portraitWidth = 100
                     expect(screenSceneAttachmentLayout.updateAttachemntLayoutWasCalled).to(beTruthy())
-                })
-                it("landscapeWidth", {
+                }
+                it("landscapeWidth") {
                     screenSceneAttachmentLayout.landscapeWidth = 100
                     expect(screenSceneAttachmentLayout.updateAttachemntLayoutWasCalled).to(beTruthy())
-                })
-                it("relative", {
+                }
+                it("relative") {
                     screenSceneAttachmentLayout.relative = false
                     expect(screenSceneAttachmentLayout.updateAttachemntLayoutWasCalled).to(beTruthy())
-                })
-                it("insets", {
+                }
+                it("insets") {
                     screenSceneAttachmentLayout.portraitInsets = UIEdgeInsetsZero
                     expect(screenSceneAttachmentLayout.updateAttachemntLayoutWasCalled).to(beTruthy())
                     screenSceneAttachmentLayout.updateAttachemntLayoutWasCalled = false
                     screenSceneAttachmentLayout.landscapeInsets = UIEdgeInsetsZero
                     expect(screenSceneAttachmentLayout.updateAttachemntLayoutWasCalled).to(beTruthy())
-                })
-                it("interpolatingEffectRelativeValue", {
+                }
+                it("interpolatingEffectRelativeValue") {
                     screenSceneAttachmentLayout.interpolatingEffectRelativeValue = 100
                     expect(screenSceneAttachmentLayout.updateAttachemntLayoutWasCalled).to(beTruthy())
-                })
-                it("shadowIntensity", {
+                }
+                it("shadowIntensity") {
                     screenSceneAttachmentLayout.shadowIntensity = 100
                     expect(screenSceneAttachmentLayout.updateAttachemntLayoutWasCalled).to(beTruthy())
-                })
-            })
+                }
+            }
             
-            it("should have portraitWidth == landscapeWidth when init(width: ...", {
+            it("should have portraitWidth == landscapeWidth when init(width: ...") {
                 
                 screenSceneAttachmentLayout = MockScreenSceneAttachmentLayout()
                 
@@ -114,9 +114,9 @@ class ScreenSceneAttachmenSpec: QuickSpec {
                 
                 expect(screenSceneAttachmentLayout.relative).to(equal(true))
                 
-            })
+            }
             
-        })
+        }
         
         
     }

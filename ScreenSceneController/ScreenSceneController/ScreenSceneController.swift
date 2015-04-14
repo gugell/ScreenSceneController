@@ -94,7 +94,7 @@ import UIKit
     
     public var viewControllers: [ScreenScene] {
         get {
-            return screenSceneNavigationController.viewControllers as [ScreenScene]
+            return screenSceneNavigationController.viewControllers as! [ScreenScene]
         }
         set {
             setViewControllers(newValue, animated: false)

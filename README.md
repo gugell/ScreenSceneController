@@ -1,6 +1,6 @@
 # ScreenSceneController
 
-[![CI Status](http://img.shields.io/travis/rshevchuk/ScreenSceneController.svg?style=flat)](https://travis-ci.org/rshevchuk/ScreenSceneController)
+**I've decided to stop developing the library since we changed the UI of our iPad apps when Apple introduced Slide Over, Split View, and size classes. The library uses Swift 1.2, and it's still public for demonstration purposes. Please, keep that in mind.**
 
 ScreenSceneController is a specialized view controller that manages the navigation of hierarchical content. It was originally used in JetRadar and Aviasales apps.
 
@@ -11,7 +11,7 @@ ScreenSceneController is a specialized view controller that manages the navigati
 
 ## Installation
 
-ScreenSceneController is **not available** through [CocoaPods](http://cocoapods.org) because Swift Pods support is still being worked.
+ScreenSceneController is **not available** as CocoaPod. Swift Support wasn't added to [CocoaPods](http://cocoapods.org) at the time I was making the library.
 
 For this reason you should add ScreenSceneController's **\*.swift sources** to you project **manually**.
 
@@ -22,7 +22,7 @@ let mainViewController = UIViewController()
 let screenScene = ScreenScene(mainViewControler: mainViewController)
 self.screenSceneController?.pushScreenScene(screenScene, animated: true)
 ```
-
+[Usage GIF Preview](https://github.com/rshevchuk/ScreenSceneController/blob/master/preview.gif?raw=true)
 ![ScreenSceneController](https://github.com/rshevchuk/ScreenSceneController/blob/master/preview.gif?raw=true)
 
 ### Attach
